@@ -33,8 +33,8 @@ jobs:
 
     - name: commit
       run: |
-        git config --global user.email 827737456@qq.com
-        git config --global user.name lenfeng666
+        git config --global user.email 2864715696@qq.com
+        git config --global user.name FY-yun
         git add .
         git commit -m "update" -a
         
