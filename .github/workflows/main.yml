@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
 
   schedule:
-     - cron: '0 * * * *' # 每小时运行一次
+    - cron: '0 * * * *' # 每小时运行一次 
     
 jobs:
   build:
@@ -33,7 +33,7 @@ jobs:
 
     - name: commit
       run: |
-        git config --global user.email 3545184062@qq.com
+        git config --global user.email 2864715696@qq.com
         git config --global user.name FY-yun
         git add .
         git commit -m "update" -a
