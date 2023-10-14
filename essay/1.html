@@ -1,18 +1,32 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
   <style>
     body {
-      text-align: center; /* 居中对齐整个页面内容 */
-      font-family: Arial, sans-serif; /* 设置字体 */
-      padding: 20px; /* 添加内边距，增加内容的可读性 */
+      font-family: Arial, sans-serif; /* 设置通用字体 */
+      padding: 20px; /* 通用内边距 */
     }
     h1 {
       text-align: center; /* 居中对齐标题 */
     }
+    h2 {
+      text-align: center; /* 居中对齐子标题 */
+    }
+    p {
+      text-align: center; /* 居中对齐日期 */
+    }
     img {
-      max-width: 100%; /* 图片宽度自适应 */
+      width: 100%; /* 图片宽度100%，裁剪超出视图 */
       height: auto; /* 图片高度自适应 */
+    }
+
+    @media screen and (max-width: 768px) {
+      /* 在小屏幕上应用的样式 */
+      body {
+        text-align: center; /* 居中对齐整个页面内容 */
+        overflow: hidden; /* 防止页面滚动 */
+      }
     }
   </style>
 </head>
@@ -20,11 +34,10 @@
   <h1>第一篇博客</h1>
   <p>日期：2023-10-14</p>
   
-  <p>这是文章，以后将在这里提供教程和分享内容</p>
+  <h2>这是文章，以后将在这里提供教程和分享内容</h2>
   <img src="img/1956C0F3144155B1CE8047DCCE59F71E.jpg" alt="图片1">
   
-  <p>嘿嘿嘿</p>
+  <h2>嘿嘿</h2>
   <img src="img/F7DA07FAEF1F0C24E5FBF7C8DFF810B0.jpg" alt="图片2">
-
 </body>
 </html>
