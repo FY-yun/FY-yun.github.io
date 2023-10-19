@@ -21,6 +21,12 @@ html_file.write('  document.execCommand("copy");\n')
 html_file.write('  document.body.removeChild(textArea);\n')
 html_file.write('  alert("磁力链接已复制到剪贴板: " + link);\n')
 html_file.write('}\n')
+html_file.write('function cantCopyDownload(link) {\n')
+html_file.write('  var confirmation = confirm("无法复制下载链接。是否要跳转到下载页面？");\n')
+html_file.write('  if (confirmation) {\n')
+html_file.write('    window.location.href = "https://fengyegf.com.cn/dm/zy.html";\n')
+html_file.write('  }\n')
+html_file.write('}\n')
 html_file.write('</script>\n')
 html_file.write('</head>\n<body>\n')
 
@@ -62,7 +68,8 @@ for page in range(1, 3):
         # 写入时间，名称，下载链接到HTML文件
         for time, name, magnet_link in zip(times, names, magnet_links):
             download_link = f'<a class="download-link" href="javascript:void(0);" onclick="copyMagnetLink(\'{escape(magnet_link)}\')">{escape(name)}</a>'
-            html_file.write(f'<p>时间: {escape(time)}, 名称: {download_link}</p>\n')
+            cant_copy_link = f'<a class="download-link" href="javascript:void(0);" onclick="copyMagnetLink(\'{escape(magnet_link)}\')">{escape(name)}</a>'
+            html_file.write(f'<p>时间: {escape(time)}, 名称: {cant_copy_link}</p>\n')
     else:
         html_file.write('<p>无法获取网页内容。</p>\n')
 
