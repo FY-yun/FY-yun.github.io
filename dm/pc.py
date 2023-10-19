@@ -6,7 +6,23 @@ from html import escape
 html_file = open("zy.html", "w", encoding='utf-8')
 
 # 写入HTML文件的头部
-html_file.write("<html>\n<head>\n<title>动画信息</title>\n</head>\n<body>\n")
+html_file.write("<html>\n<head>\n<title>动画信息</title>\n")
+html_file.write('<style>\n')
+html_file.write('a.download-link { text-decoration: none; }\n')
+html_file.write('a.download-link::after { content: " \u2193"; }\n')  # 添加下载图标
+html_file.write('</style>\n')
+html_file.write('<script>\n')
+html_file.write('function copyMagnetLink(link) {\n')
+html_file.write('  var textArea = document.createElement("textarea");\n')
+html_file.write('  textArea.value = link;\n')
+html_file.write('  document.body.appendChild(textArea);\n')
+html_file.write('  textArea.select();\n')
+html_file.write('  document.execCommand("copy");\n')
+html_file.write('  document.body.removeChild(textArea);\n')
+html_file.write('  alert("磁力链接已复制到剪贴板: " + link);\n')
+html_file.write('}\n')
+html_file.write('</script>\n')
+html_file.write('</head>\n<body>\n')
 
 # 处理多个页面
 for page in range(1, 3):
@@ -36,16 +52,17 @@ for page in range(1, 3):
         a_tags = soup.find_all('a', href=True, target='_blank')
         names = []  # 存储名称
         # 提取<a>标签中的文本内容，但排除指定的文本
+        excluded_texts = ['tedmind.com', '22年4月番组表开放编辑', '动画资源标题格式说明', '搜索小提示',"意见建议"]
         for a_tag in a_tags:
             text_inside_a = a_tag.text  # 获取<a>标签中的文本内容
             # 排除包含指定文本的文本内容
-            excluded_texts = ['tedmind.com', '22年4月番组表开放编辑', '动画资源标题格式说明', '搜索小提示',"意见建议"]
             if not any(text in text_inside_a for text in excluded_texts):
                 names.append(text_inside_a)
 
-        # 写入时间，名称，磁力链接到HTML文件
+        # 写入时间，名称，下载链接到HTML文件
         for time, name, magnet_link in zip(times, names, magnet_links):
-            html_file.write(f'<p>时间: {escape(time)}, 名称: {escape(name)}, 磁力链接: <a href="{escape(magnet_link)}">{escape(magnet_link)}</a></p>\n')
+            download_link = f'<a class="download-link" href="javascript:void(0);" onclick="copyMagnetLink(\'{escape(magnet_link)}\')">{escape(name)}</a>'
+            html_file.write(f'<p>时间: {escape(time)}, 名称: {download_link}</p>\n')
     else:
         html_file.write('<p>无法获取网页内容。</p>\n')
 
