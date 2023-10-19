@@ -15,6 +15,12 @@ function copyMagnetLink(link) {
   document.body.removeChild(textArea);
   alert("磁力链接已复制到剪贴板: " + link);
 }
+function cantCopyDownload(link) {
+  var confirmation = confirm("无法复制下载链接。是否要跳转到下载页面？");
+  if (confirmation) {
+    window.location.href = "https://fengyegf.com.cn/dm/zy.html";
+  }
+}
 </script>
 </head>
 <body>
