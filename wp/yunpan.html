@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>文件夹卡片</title>
+    <style>
+        .folder-card {
+            border: 1px solid #ccc;
+            margin: 10px;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+			border-radius: 10px;
+        }
+
+    .folder-icon {
+        width: 25px;
+        height: 25px;
+        margin-right: 10px;
+        background: url('img/文件.png') no-repeat center;
+        background-size: contain;
+    }
+
+        .folder-details {
+            flex-grow: 1;
+        }
+
+        .folder-name {
+            font-weight: bold;
+        }
+
+        .folder-info {
+            font-size: 14px;
+        }
+
+        .folder-card:hover {
+            background-color: #f0f0f0;
+        }
+    </style>
+</head>
+<body>
+    <div class="folder-card" onclick="openFolder('1/dm.html')">
+        <div class="folder-icon"></div>
+        <div class="folder-details">
+            <div class="folder-name">枫叶的文件库</div>
+            <div class="folder-info">文件数量: 1, 文件大小: 10MB, 创建时间: 2023-10-26</div>
+        </div>
+    </div>
+
+    <div class="folder-card" onclick="openFolder('2/daim.html')">
+        <div class="folder-icon"></div>
+        <div class="folder-details">
+            <div class="folder-name">代码库</div>
+            <div class="folder-info">文件数量: 1, 文件大小: 20MB, 创建时间: 2023-10-26</div>
+        </div>
+    </div>
+
+    <!-- 添加更多文件夹卡片 -->
+
+<script>
+    function openFolder(folderName) {
+        window.location.href = './nr/' + folderName;
+    }
+</script>
+</body>
+</html>
