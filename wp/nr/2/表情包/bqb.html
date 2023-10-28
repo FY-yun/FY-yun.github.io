@@ -18,7 +18,7 @@
             width: 24px;
             height: 24px;
             margin-right: 10px;
-            background: url('../../img/文件.png') no-repeat center;
+            background: url('../../../img/文件.png') no-repeat center;
 			background-size: contain;
         }
 
@@ -60,31 +60,20 @@
     </style>
 </head>
 <body>
-	<div class="clickable-text" onclick="redirectToPage()">枫叶个人数据库</div>
+	<div class="clickable-text" onclick="redirectToPage()">米游社表情包爬虫</div>
 	
-    <div class="folder-card" onclick="openFolder('folder1')">
+    <div class="folder-card" onclick="openFolder('mi.html')">
         <div class="folder-icon"></div>
         <div class="folder-details">
-            <div class="folder-name">新建文件夹</div>
-            <div class="folder-info">文件数量: 0, 文件大小: 0MB, 创建时间: 2023-10-26</div>
+            <div class="folder-name">表情包爬取</div>
+            <div class="folder-info">文件数量: 1, 文件大小: 1kB, 创建时间: 2023-10-26</div>
         </div>
     </div>
-
-    <div class="folder-card" onclick="openFolder('folder2')">
-        <div class="folder-icon"></div>
-        <div class="folder-details">
-            <div class="folder-name">新建文件夹</div>
-            <div class="folder-info">文件数量: 0, 文件大小: 0MB, 创建时间: 2023-10-26</div>
-        </div>
-    </div>
-
-    <!-- 添加更多文件夹卡片 -->
-
-    <script>
-        function openFolder(folderName) {
-            // 这里可以添加打开文件夹的逻辑，例如加载文件列表等
-            window.location.href = '/' + folderName;
-        }
-    </script>
+	<script>
+	        function openFolder(folderName) {
+	            // 这里可以添加打开文件夹的逻辑，例如加载文件列表等
+	            window.location.href = './' + folderName;
+	        }
+	</script>
 </body>
 </html>

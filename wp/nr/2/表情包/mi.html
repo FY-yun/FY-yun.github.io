@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>
+			米爬虫
+		</title>
+		<style>
+			body {
+				text-align: center;
+			}
+			#download {
+				cursor: pointer;
+				color: blue;
+				text-decoration: underline;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>米游社爬虫</h1>
+		<p>对米游社区的表情包进行请求</p>
+		<p>首先会判断响应，响应成功后会开始截取字段</p>
+		<p>然后会生成一个网页，固定每一个图片的大小</p>
+		<p id="download" onclick="downloadFile()">点击这里下载源码</p>
+		<p>使用方法下载对应的模块和包服务，然后运行即可，代码中有注释</p>
+		<p>我们暂时无法提供图片，遇到任何问题在主页联系我们即可</p>
+		<p>你对网页访了: <span id="visits"></span>次</p>
+		<script>
+			var visits = localStorage.getItem('visits') ? parseInt(localStorage.getItem('visits')) : 0;
+			visits++;
+			localStorage.setItem('visits', visits);
+			document.getElementById('visits').innerText = visits;
+			function downloadFile() {
+				window.location.href = 'https://i-810.lanzouc.com:446/10281600144634188bb/2023/10/28/13711be27280ddac681a06e9d936f9f2.zip?st=1OJONgCsef-68gSbUzCgHA&e=1698484247&b=VuMJuFDjV7RVuAfpA7RT8wPoDrUFjFb8Bb5dyQCsBytWfghhUCA_c&fi=144634188&pid=140-249-188-241&up=2&mp=1&co=0';
+			}
+		</script>
+	</body>
+</html>
