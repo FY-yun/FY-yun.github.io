@@ -60,20 +60,31 @@
     </style>
 </head>
 <body>
-	<div class="clickable-text" onclick="redirectToPage()">米游社表情包爬虫</div>
+	<div class="clickable-text" onclick="redirectToPage()">米爬虫</div>
 	
-    <div class="folder-card" onclick="openFolder('mi.html')">
+    <div class="folder-card" onclick="openFolder('mi/mi.html')">
         <div class="folder-icon"></div>
         <div class="folder-details">
             <div class="folder-name">表情包爬取</div>
             <div class="folder-info">文件数量: 1, 文件大小: 1kB, 创建时间: 2023-10-26</div>
         </div>
     </div>
-	<script>
-	        function openFolder(folderName) {
-	            // 这里可以添加打开文件夹的逻辑，例如加载文件列表等
-	            window.location.href = './' + folderName;
-	        }
-	</script>
+
+    <div class="folder-card" onclick="openFolder('mi/mibq.html')">
+        <div class="folder-icon"></div>
+        <div class="folder-details">
+            <div class="folder-name">活动信息爬取</div>
+            <div class="folder-info">文件数量: 1, 文件大小: 2kB, 创建时间: 2023-10-26</div>
+        </div>
+    </div>
+
+    <!-- 添加更多文件夹卡片 -->
+
+    <script>
+        function openFolder(folderName) {
+            // 这里可以添加打开文件夹的逻辑，例如加载文件列表等
+            window.location.href = './' + folderName;
+        }
+    </script>
 </body>
 </html>
