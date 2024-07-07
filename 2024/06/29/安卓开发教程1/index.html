@@ -27,17 +27,13 @@
 <meta property="og:site_name" content="枫叶个人博客">
 <meta property="og:description" content="本期带来安卓开发入门教程，首先确保你有一个Android Studio，然后我们开始吧！android studio是安卓开发工具,安装教程自行准备和下载配置完成后我们打开，即可看到一个加号，点击加号我们就会得到一下界面  左侧是你要编写的设备，比如第一个默认选择的是平板和安卓手机，往下依次是，手表，电视，汽车，我们一般是给安卓手机开发，所以保持第一个选择，然后2在看右边，右边是官方的示例模板,用">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://onedrive.live.com/embed?resid=2182F48B953D36F8%2114509&authkey=%21AJRZLrLFOnnZ0V4&width=1017&height=776">
-<meta property="og:image" content="https://onedrive.live.com/embed?resid=2182F48B953D36F8%2114510&authkey=%21AFEnbtfA2AYwrHI&width=1020&height=776">
-<meta property="og:image" content="https://onedrive.live.com/embed?resid=2182F48B953D36F8%2114511&authkey=%21AGLtT5ELfAhYM2Y&width=1023&height=781">
-<meta property="og:image" content="https://onedrive.live.com/embed?resid=2182F48B953D36F8%2114512&authkey=%21AEc7jcWbq8SyCw8&width=1920&height=1040">
-<meta property="og:image" content="https://onedrive.live.com/embed?resid=2182F48B953D36F8%2114513&authkey=%21ACU6Nvpy2v52nwI&width=1735&height=711">
+<meta property="og:image" content="https://onedrive.live.com/embed?resid=2182F48B953D36F8%2114507&authkey=%21ANVJbSEI9UiTlkk&width=698&height=515">
 <meta property="article:published_time" content="2024-06-29T04:29:07.000Z">
-<meta property="article:modified_time" content="2024-07-06T10:30:49.158Z">
+<meta property="article:modified_time" content="2024-07-07T14:01:43.500Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="安卓开发教学">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://onedrive.live.com/embed?resid=2182F48B953D36F8%2114509&authkey=%21AJRZLrLFOnnZ0V4&width=1017&height=776">
+<meta name="twitter:image" content="https://onedrive.live.com/embed?resid=2182F48B953D36F8%2114507&authkey=%21ANVJbSEI9UiTlkk&width=698&height=515">
   
   
   
@@ -68,13 +64,18 @@
 <link  rel="stylesheet" href="/css/main.css" />
 
 
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
 
 
 
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
     Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.7","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":false,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml","include_content_in_search":true};
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.7","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml","include_content_in_search":true};
 
     if (CONFIG.web_analytics.follow_dnt) {
       var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
@@ -447,6 +448,9 @@
 
 
 
+  
+
+
 
   
 
@@ -601,6 +605,8 @@
   });
 </script>
 
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
 
   <script>Fluid.plugins.codeWidget();</script>
 
