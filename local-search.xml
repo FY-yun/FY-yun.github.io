@@ -4,6 +4,29 @@
   
   
   <entry>
+    <title>sing-box编译教程</title>
+    <link href="/2024/07/09/sing-box%E7%BC%96%E8%AF%91%E6%95%99%E7%A8%8B/"/>
+    <url>/2024/07/09/sing-box%E7%BC%96%E8%AF%91%E6%95%99%E7%A8%8B/</url>
+    
+    <content type="html"><![CDATA[<h3 id="本期带来sing-box的编译教程，从内核到打包"><a href="#本期带来sing-box的编译教程，从内核到打包" class="headerlink" title="本期带来sing-box的编译教程，从内核到打包"></a>本期带来sing-box的编译教程，从内核到打包</h3><h4 id="首先带来内核编译教程"><a href="#首先带来内核编译教程" class="headerlink" title="首先带来内核编译教程"></a>首先带来内核编译教程</h4><img src="https://onedrive.live.com/embed?resid=2182F48B953D36F8%2114523&authkey=%21ALLhNkxH2LGIOh0&width=535&height=627" width="535" height="627" /><h4 id="我们找到对应分支点击，然后去克隆这个分支代码"><a href="#我们找到对应分支点击，然后去克隆这个分支代码" class="headerlink" title="我们找到对应分支点击，然后去克隆这个分支代码"></a>我们找到对应分支点击，然后去克隆这个分支代码</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">git <span class="hljs-built_in">clone</span> -b v1.10.0-alpha.20 --single-branch https://github.com/SagerNet/sing-box.git<br></code></pre></td></tr></table></figure><h4 id="克隆成功后我们打开这个文件夹使用Git-bash进行编译，首先到达这个文件夹里面"><a href="#克隆成功后我们打开这个文件夹使用Git-bash进行编译，首先到达这个文件夹里面" class="headerlink" title="克隆成功后我们打开这个文件夹使用Git bash进行编译，首先到达这个文件夹里面"></a>克隆成功后我们打开这个文件夹使用Git bash进行编译，首先到达这个文件夹里面</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">make install<br></code></pre></td></tr></table></figure><h4 id="编译成功后我们输入"><a href="#编译成功后我们输入" class="headerlink" title="编译成功后我们输入"></a>编译成功后我们输入</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">make lib_install<br></code></pre></td></tr></table></figure><h4 id="然后我们在输入"><a href="#然后我们在输入" class="headerlink" title="然后我们在输入"></a>然后我们在输入</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">make lib_android<br></code></pre></td></tr></table></figure><h4 id="我们可以看到多了一个libbox-aar文件和libbox-sources-jar文件就说明构建成功了，我们接下来构建他的安卓apk"><a href="#我们可以看到多了一个libbox-aar文件和libbox-sources-jar文件就说明构建成功了，我们接下来构建他的安卓apk" class="headerlink" title="我们可以看到多了一个libbox.aar文件和libbox-sources.jar文件就说明构建成功了，我们接下来构建他的安卓apk"></a>我们可以看到多了一个libbox.aar文件和libbox-sources.jar文件就说明构建成功了，我们接下来构建他的安卓apk</h4><img src="https://onedrive.live.com/embed?resid=2182F48B953D36F8%2114524&authkey=%21AKkUjD89BV6DrkY&width=720&height=403" width="720" height="403" /><h4 id="我们找到这个文件点击进入即可到达安卓的项目页面，然后和之前一样进行克隆输入"><a href="#我们找到这个文件点击进入即可到达安卓的项目页面，然后和之前一样进行克隆输入" class="headerlink" title="我们找到这个文件点击进入即可到达安卓的项目页面，然后和之前一样进行克隆输入"></a>我们找到这个文件点击进入即可到达安卓的项目页面，然后和之前一样进行克隆输入</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">git <span class="hljs-built_in">clone</span> -b dev --single-branch https://github.com/SagerNet/sing-box-for-android.git<br></code></pre></td></tr></table></figure><h4 id="这里我选择的是dev分支，也就是开发版，平时的话选择mian也就是主分支稳定版克隆完成后打开文件夹，把你构建的内核也就是libbox-aar这个文件复制到你的安卓项目app-libs-目录下，默认是没有libs的需要自己创建，然后用android-studio打开项目，然后点击build-build-apk即可本期教程到此处结束，感谢观看"><a href="#这里我选择的是dev分支，也就是开发版，平时的话选择mian也就是主分支稳定版克隆完成后打开文件夹，把你构建的内核也就是libbox-aar这个文件复制到你的安卓项目app-libs-目录下，默认是没有libs的需要自己创建，然后用android-studio打开项目，然后点击build-build-apk即可本期教程到此处结束，感谢观看" class="headerlink" title="这里我选择的是dev分支，也就是开发版，平时的话选择mian也就是主分支稳定版克隆完成后打开文件夹，把你构建的内核也就是libbox.aar这个文件复制到你的安卓项目app&#x2F;libs&#x2F;目录下，默认是没有libs的需要自己创建，然后用android studio打开项目，然后点击build-&gt;build apk即可本期教程到此处结束，感谢观看"></a>这里我选择的是dev分支，也就是开发版，平时的话选择mian也就是主分支稳定版克隆完成后打开文件夹，把你构建的内核也就是libbox.aar这个文件复制到你的安卓项目app&#x2F;libs&#x2F;目录下，默认是没有libs的需要自己创建，然后用android studio打开项目，然后点击build-&gt;build apk即可本期教程到此处结束，感谢观看</h4>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>安卓开发教学</tag>
+      
+      <tag>编程</tag>
+      
+      <tag>编译</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>安卓开发教程2</title>
     <link href="/2024/07/06/%E5%AE%89%E5%8D%93%E5%BC%80%E5%8F%91%E6%95%99%E7%A8%8B2/"/>
     <url>/2024/07/06/%E5%AE%89%E5%8D%93%E5%BC%80%E5%8F%91%E6%95%99%E7%A8%8B2/</url>
