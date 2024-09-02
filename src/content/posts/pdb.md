@@ -17,9 +17,9 @@ tags:
 
 至少我还去重点关注过这个问题，因为c++学起来真的令人头大，最后分享几篇类似的解决文章
 
-::: details 相关链接
+### 相关链接
 > [调试的时候提示未加载UnrealEditor-SkeletalMeshUtilitiesCommon.pdb · Issue #9 · QSWWLTN/DigitalLife (github.com)](https://github.com/QSWWLTN/DigitalLife/issues/9)
 
 > [彻底解决VS加载符号与查找PDB文件问题_vs运行,未加载kernelbase.pdb-CSDN博客](https://blog.csdn.net/qq_41308027/article/details/88602961)
-:::
+
 

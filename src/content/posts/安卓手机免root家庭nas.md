@@ -48,8 +48,7 @@ bash -c "$(curl -L https://raw.githubusercontent.com/RimuruW/Aria2-Termux/master
 我们进入alist的主页面点击下面的管理进入后点击设置->其他在Aria2 密钥处填入RPC密钥即可
 ### 结尾
 这个东西也是花费了我好几天，希望各位小伙伴们能喜欢，其次就是我还想安装小雅来着的，但是小雅的安装有一个访问doker的网络问题，不知道为什么始终连接不上，等我在搞几天
-::: details 相关文章
+### 相关文章
 [Android 一键安装配置 Aria2](https://blog.linioi.com/posts/aria2-for-termux/)
 
 [ Android 的 Aria2 一键安装管理脚本](https://github.com/RimuruW/Aria2-Termux)
-:::

@@ -18,6 +18,5 @@ tags:
 
 检查自己电脑代理如果开启了就会导致项目中的“DerivedDataCache”无法启动，这个东西真的老六找了许久在找到问题
 
-::: details 相关链接
+### 相关链接
 > [Unreal 5.4 崩溃/无法启动“DerivedDataCache”](https://forums.unrealengine.com/t/unreal-5-4-crash-will-not-start-deriveddatacache/1776423/16)
-:::

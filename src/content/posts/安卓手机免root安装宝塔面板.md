@@ -59,7 +59,7 @@ python termux-linux-install.py
 <img src="https://onedrive.live.com/embed?resid=2182F48B953D36F8%2114555&authkey=%21AHGa9T-9MZ2Xm68&width=844&height=552" width="844" height="552" />
 
 我们输入1即可自动安装，安装完成后我们应该是默认在unbuntu系统下，我们输入ps应该会出现报错，报错原因是分区挂载异常
-::: danger
+:::warning
 Error: /proc must be mounted
   To mount /proc at boot you need an /etc/fstab line like:
       proc   /proc   proc    defaults
@@ -152,10 +152,8 @@ bt 14
 ### 劝告
 本期教程适合动手能力强，爱折腾的小伙伴，安装宝塔后面板中其实还会遇到很多问题，宝塔是为服务器设计的很多软件的适配对于安卓来说很困难，当然动手能力强的应该也是可以解决的
 ### 相关文章
-::: details 相关文章
 [国光大佬](https://www.sqlsec.com/2020/04/termuxlinux.html)Android Termux 安装 Linux 就是这么简单
 
 [Termux安装宝塔面板保姆级教学](https://blog.csdn.net/m0_66678248/article/details/136462877)本期教程由这个大佬提供
 
 [Termux 解决使用ps -ef出现关于挂载/proc分区的错误](https://blog.csdn.net/m0_66678248/article/details/136440403?spm=1001.2014.3001.5501)
-:::
